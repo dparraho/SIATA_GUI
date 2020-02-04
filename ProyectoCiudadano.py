@@ -123,7 +123,9 @@ places2 = {'estaciones_internas':[150, 275],'temperatura_o_humedad':[10, 275],'t
 'box_fechai_meteo':[120, 198],'label_fechai_meteo':[120, 170],'box_fechaf_meteo':[220, 198],'label_fechaf_meteo':[220, 170]
            }
 
-
+_ = read_csv('Ubicaciones_ubuntu.csv', header=[0, 1], index_col=0)
+places = _['pes0']
+places2 = _['pes1']
 def send_copy(file, endswith='SAL-9000', specific_folder=''):#
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
