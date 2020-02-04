@@ -28,7 +28,7 @@ matplotlib.use('TkAgg')
 
 ventana = Tk()
 ventana.title("ProyectoCiudadanosCientificos")
-ventana.geometry("1000x600")
+ventana.geometry("1100x600")
 
 # Creando las pestañas
 notebook = ttk.Notebook(ventana)
@@ -41,7 +41,7 @@ pes1 = ttk.Frame(notebook)  # pestaña # 2
 notebook.add(pes1, text='Graficacion')
 
 background_image = Image.open('SIATA.jpg')
-ancho = 1000
+ancho = 1100
 wpercent = (ancho / float(background_image.size[0]))
 hsize = int((float(background_image.size[1]) * float(wpercent)))
 background_image = background_image.resize((ancho, hsize), Image.ANTIALIAS)
